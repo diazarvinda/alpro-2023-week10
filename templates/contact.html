@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>diaz arvin</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333; 
+            margin: 0;
+        }
+
+        #section-1 {
+            background-color: #484848;
+            display: flex;
+            align-items: center;
+            height: 7vh;
+            margin: 0;
+            padding: 0;
+            border-bottom: 5px solid rgba(0, 0, 0, 0.3);
+        }
+
+        #section-1 img {
+            height: 6vh;
+            padding-left: 1vw;
+        }
+
+        #section-1 a {
+            text-decoration: none;
+            font-size: 16px;
+            color: #f2f2f2;
+            margin: 0 10px;
+        }
+
+        #navbar-r {
+            margin-left: 88vh;
+        }
+
+        #section-2 {
+            background-color: #333; 
+            color: #f2f2f2; 
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh; 
+            padding-top: 60px;
+        }    
+
+        #section-2 h1 {
+            font-size: 36px;
+            padding-bottom: 30px
+        }
+
+        #section-2-l img {
+            height: 600px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        #section-2-l {
+            padding-left: 200px;
+        }   
+
+        #section-2-r {
+            display: flex;
+            flex-direction: column;
+            padding-left: 75px;
+            padding-top: 55px;
+        }   
+
+        form { 
+            max-width: 500px; 
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            max-width: 400px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #message {
+            max-width: 400px;
+        }
+
+        #mess {
+            display: flex;
+        }
+
+        #mess-r {
+            padding-left: 30px;
+            padding-top: 10px;
+        }
+
+        textarea {
+            width: 310px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div id="section-1">
+        <a href="/">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="">
+        </a>
+    <div id="navbar-l">
+        <a href="/ach">Achievement</a>
+        <a href="/project">Project</a>
+        <a href="/hobby">Hobby</a>
+        <a href="/contact">Contact</a>
+    </div>
+    <div id="navbar-r">
+        <a href="/fibo">Fibonacci</a>
+        <a href="/json">JSON</a>
+        <a href="/cont-log">Contact Log</a>
+    </div>
+</div>
+    <div id="section-2">
+        <div id="section-2-l">
+            <img src="{{ url_for('static', filename='diaz.jpeg') }}" alt="">
+        </div>
+        <div id="section-2-r">
+            <h1>Contact Me</h1>
+            <form method="POST">
+                <label for="fname">Name</label>
+                <input type="text" id="fname" name="fname">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email">
+                <label for="message">Message</label>
+                <div id="mess">
+                    <div id="mess-l">
+                        <textarea name="message" rows="4"></textarea>
+                    </div>
+                    <div id="mess-r">
+                        <input type="submit" value="Sent">
+                    </div>
+                </div>
+                {% if success_message %}
+                    <p style="color: green;">{{ success_message }}</p>
+                {% endif %}
+            </form>
+        </div>
+    </div>
+</body>
+</html>

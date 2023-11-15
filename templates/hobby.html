@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>diaz arvin</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333; 
+            margin: 0;
+        }
+        #section-1 {
+            background-color: #484848;
+            display: flex;
+            align-items: center;
+            height: 7vh;
+            margin: 0;
+            padding: 0;
+            border-bottom: 5px solid rgba(0, 0, 0, 0.3);
+        }
+
+        #section-1 img {
+            height: 6vh;
+            padding-left: 1vw;
+        }
+
+        #section-1 a {
+            text-decoration: none;
+            font-size: 16px;
+            color: #f2f2f2;
+            margin: 0 10px;
+        }
+
+        #navbar-r {
+            margin-left: 88vh;
+        }
+
+        #section-2 {
+            color: #f2f2f2; 
+            margin: 0;
+            padding: 0;
+            height: 100vh; 
+            padding-top: 60px;
+            text-align: center;
+        }     
+
+        #section-2 h1 {
+            padding-bottom: px;
+            font-size: 40px;
+        }
+
+        #section-2 img {
+            height: 600px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="section-1">
+        <a href="/">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="">
+        </a>
+    <div id="navbar-l">
+        <a href="/ach">Achievement</a>
+        <a href="/project">Project</a>
+        <a href="/hobby">Hobby</a>
+        <a href="/contact">Contact</a>
+    </div>
+    <div id="navbar-r">
+        <a href="/fibo">Fibonacci</a>
+        <a href="/json">JSON</a>
+        <a href="/cont-log">Contact Log</a>
+    </div>
+    </div>
+    <div id="section-2">
+        <h1>My Hobby</h1>
+            <img src="{{ url_for('static', filename='hobby.jpg') }}" alt="">
+</body>
+</html>

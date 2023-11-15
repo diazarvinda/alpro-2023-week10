@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>diaz arvin</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333; 
+            margin: 0;
+        }
+
+        #section-1 {
+            background-color: #484848;
+            display: flex;
+            align-items: center;
+            height: 7vh;
+            margin: 0;
+            padding: 0;
+            border-bottom: 5px solid rgba(0, 0, 0, 0.3);
+        }
+
+        #section-1 img {
+            height: 6vh;
+            padding-left: 1vw;
+        }
+
+        #section-1 a {
+            text-decoration: none;
+            font-size: 16px;
+            color: #f2f2f2;
+            margin: 0 10px;
+        }
+
+        #navbar-r {
+            margin-left: 88vh;
+        }
+
+    #section-2 {
+        background-color: #333;
+        color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        padding-top: 60px;
+    }
+
+    #section-2 h1 {
+        font-size: 40px;
+        padding-bottom: 50px;
+    }
+
+    #section-2 img {
+        height: 400px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    #img-c {
+        display: flex;
+    }
+
+    #img-d {
+       padding-left: 40px;
+    }
+
+    #img-d p {
+        background-color: rgba(255, 255, 255, 0.1); 
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+        border-radius: 5px;
+        font-size: 16px;
+        line-height: 1.5;
+        max-width: 600px;
+        padding: 20px;
+        text-align: justify;
+    }
+
+    </style>
+</head>
+<body>
+    <div id="section-1">
+        <a href="/">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="">
+        </a>
+    <div id="navbar-l">
+        <a href="/ach">Achievement</a>
+        <a href="/project">Project</a>
+        <a href="/hobby">Hobby</a>
+        <a href="/contact">Contact</a>
+    </div>
+    <div id="navbar-r">
+        <a href="/fibo">Fibonacci</a>
+        <a href="/json">JSON</a>
+        <a href="/cont-log">Contact Log</a>
+    </div>
+</div>
+    <div id="section-2">
+        <h1>Project</h1>
+        <div id="img-c">
+            <img src="{{ url_for('static', filename='sunrise.png') }}" alt="Sunrise Jeep Tour Website">
+            <div id="img-d">
+                <h2>Sunrise Jeep Tour Website</h2>
+                <p>
+                  In collaboration with my friends, we have developed a user-friendly React.js website for Sunrise Jeep Tour. This family-owned business offers guided Jeep tours through the scenic Mount Batur in Bali. Our website provides comprehensive information about the tours, including routes and scenic spots, capturing the essence of the Sunrise Jeep Tour adventure. Through the website, we aim to inspire visitors to virtually explore Mount Batur and embark on an eco-conscious exploration of Bali's natural wonders. With professionalism and expertise, our website serves as a platform for individuals seeking an exciting and sustainable travel experience with Sunrise Jeep Tour.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
